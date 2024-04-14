@@ -1,0 +1,5 @@
+data/
+APRIL/interval_data/
+stats/
+*.o
+APRIL/*.o
