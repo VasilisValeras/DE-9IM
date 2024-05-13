@@ -70,15 +70,12 @@ void saveStats(unsigned long long &result, double totalTime, double MBRFTime, do
     cout << "***************************************************" << endl;
 }
 
-void printTopologicalStats(double DE9IM_Time) {
+void printTopologicalStats(double DE9IM_Time,double DE9IM_Time2) {
     cout << "***************************************************" << endl;
     cout << fixed << setprecision(6) << "\t-DE-9IM-join time: \t\t\t\t" << DE9IM_Time << " sec." << endl;
+    cout << fixed << setprecision(6) << "\t-Real time: \t\t\t\t" << DE9IM_Time2 << " sec." << endl;
     cout << "\t-Disjoint pairs: \t" << disjoints << endl;
     cout << "\t-Equal pairs: \t" << equals << endl;
-    /*cout << "\t-R inside S pairs: \t" << RinsideS << endl;
-    cout << "\t-S inside R pairs: \t" << SinsideR << endl;
-    cout << "\t-R covered by S pairs: \t" << RcoveredByS << endl;
-    cout << "\t-S covered by R pairs: \t" << ScoveredByR << endl; */
     cout << "\t-R contains S pairs: \t" << RcontainsS << endl;
     cout << "\t-S contains R pairs: \t" << ScontainsR << endl;
     cout << "\t-Touching pairs: \t" << touch << endl;
@@ -86,6 +83,8 @@ void printTopologicalStats(double DE9IM_Time) {
     cout << "***************************************************" << endl;
     cout << "\t-R contains S pairs with DE9IM: \t" << RcontainsS_DE9IM << endl;
     cout << "\t-S contains R pairs with DE9IM: \t" << ScontainsR_DE9IM << endl;
+    cout << "\t- Disjoints with filter : \t" << disjoints_DE9IM << endl;
+    cout << "\t- Intersect with filter : \t" << intersect_DE9IM << endl;
     
 }
 
@@ -364,7 +363,7 @@ int main(int argc, char **argv)
 
         // DE-9IM results
         cout << "**********************DE-9IM**********************" << endl;
-        printTopologicalStats(DE_9IMTime);
+        printTopologicalStats(DE_9IMTime, DE_9IMTime2);
 
     }
  

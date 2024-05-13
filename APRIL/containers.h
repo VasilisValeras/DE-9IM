@@ -55,10 +55,6 @@ extern int GALLOPING;
 //DE-9IM flags
 extern int DISJOINT;
 extern int EQUAL;
-extern int R_INSIDE_S;
-extern int S_INSIDE_R;
-extern int R_COVERED_BY_S;
-extern int S_COVERED_BY_R;
 extern int MEET;
 extern int OVERLAP;
 extern int R_CONTAINS_S;

@@ -19,14 +19,11 @@ int GALLOPING = 0;
 //DE-9IM flags
 int DISJOINT = 0;
 int EQUAL = 1;
-int R_INSIDE_S = 2;
-int S_INSIDE_R = 3;
-int R_COVERED_BY_S = 4;
-int S_COVERED_BY_R = 5;
-int MEET = 6;
-int OVERLAP = 7;
-int R_CONTAINS_S = 8;
-int S_CONTAINS_R = 9;
+int R_CONTAINS_S = 2;
+int S_CONTAINS_R = 3;
+int MEET = 4;
+int OVERLAP = 5;
+
 
 uint DESIGNATED_ORDER;
 string selection_query_filename;

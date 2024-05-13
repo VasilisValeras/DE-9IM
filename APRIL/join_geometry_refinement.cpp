@@ -180,23 +180,7 @@ int refinement_DE9IM_WithIDs(uint &idA, uint &idB, unordered_map<uint,unsigned l
 	if(boost::geometry::relate(boostPolygonS, boostPolygonR, containsMask)){
         return S_CONTAINS_R;
     }
-	/*
-    //inside
-    if(boost::geometry::relate(boostPolygonR, boostPolygonS, withinMask)){
-        return R_INSIDE_S;
-    }
-    if(boost::geometry::relate(boostPolygonS, boostPolygonR, withinMask)){
-        return S_INSIDE_R;
-    }
- 
-    //covered by
-    if(boost::geometry::relate(boostPolygonR, boostPolygonS, coveredbyMask)){
-        return R_COVERED_BY_S;
-    }
-    if(boost::geometry::relate(boostPolygonS, boostPolygonR, coveredbyMask)){
-        return S_COVERED_BY_R;
-    } */
- 
+
     //meet
     if(boost::geometry::relate(boostPolygonR, boostPolygonS, meetMask1) ||
         boost::geometry::relate(boostPolygonR, boostPolygonS, meetMask2) ||
